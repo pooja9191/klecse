@@ -1,0 +1,52 @@
+<?php
+
+/* Log out process, unsets and destroys session variables */
+
+session_start();
+
+session_unset();
+
+session_destroy(); 
+
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ 
+<meta charset="UTF-8">
+ 
+<title>Logout</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+ 
+<div class="form">
+
+<?php
+
+session_start();
+
+unset($_SESSION['username']);
+
+session_destroy();
+
+
+header("Location: 1stpg.html");
+
+exit;
+
+?>
+ 
+</div>
+
+</body>
+
+</html>
